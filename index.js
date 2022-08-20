@@ -1,39 +1,19 @@
 class Validator {
     isEmail(string) {
         const EMAILCHECK = /^([\w\d._\-#])+@([\w\d._\-#]+[.][\w\d._\-#]+)$/i;
-        if (EMAILCHECK.test(string) === false) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        return EMAILCHECK.test(string);
     }
     isDomain(string) {
         const DOMAINCHECK = /^([\wёa-я-]{2,}\.)+[\wёa-я-]{2,}$/i;
-        if (DOMAINCHECK.test(string) === false) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        return DOMAINCHECK.test(string);
     }
     isDate(string) {
         const DATECHECK = /^\d{2}[./-]\d{2}[./-]\d{4}$/;
-        if (DATECHECK.test(string) === false) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        return DATECHECK.test(string);
     }
     isPhone(string) {
         const PHONEHECK = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
-        if (PHONEHECK.test(string) === false) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        return PHONEHECK.test(string); 
     }
 }
 
@@ -46,39 +26,19 @@ console.log(validator.isPhone('+7(910)123-45-67'));
 class ValidatorStatic {
     static isEmail(string) {
         const EMAILCHECK = /^([\w\d._\-#])+@([\w\d._\-#]+[.][\w\d._\-#]+)$/i;
-        if (EMAILCHECK.test(string) === false) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        return EMAILCHECK.test(string);
     }
     static isDomain(string) {
         const DOMAINCHECK = /^([\wёa-я-]{2,}\.)+[\wёa-я-]{2,}$/i;
-        if (DOMAINCHECK.test(string) === false) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        return DOMAINCHECK.test(string);
     }
     static isDate(string) {
         const DATECHECK = /^\d{2}[./-]\d{2}[./-]\d{4}$/;
-        if (DATECHECK.test(string) === false) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        return DATECHECK.test(string);
     }
     static isPhone(string) {
         const PHONEHECK = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
-        if (PHONEHECK.test(string) === false) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        return PHONEHECK.test(string);
     }
 }
 
